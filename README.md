@@ -1,4 +1,4 @@
-# Hani El Amam
+![Hani El Amam - Senior Java Software Engineer](assets/hani-el-amam-banner.png)
 
 **Senior Java Software Engineer | Technical Consultant | Amsterdam**
 

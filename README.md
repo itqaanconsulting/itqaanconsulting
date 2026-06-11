@@ -24,13 +24,18 @@ My work sits at the intersection of business and technology. I translate require
 
 Cloud-native service desk implemented as three independently deployable Spring Boot microservices.
 
-**Demonstrates:** microservice boundaries, synchronous service communication, Resilience4j, PostgreSQL, distributed tracing, Prometheus, Grafana, Docker, Kubernetes, Terraform and Azure Container Apps.
+**Demonstrates:** microservice boundaries, resilient service communication, assignment notifications, PostgreSQL, distributed tracing, Prometheus, Grafana, Docker, Kubernetes, Terraform and Azure Container Apps.
+
+[![ServiceDesk build](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/build.yml)
+[![Terraform](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/terraform.yml/badge.svg)](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/terraform.yml)
 
 ### [OrderFlow Events](https://github.com/itqaanconsulting/orderflow-events)
 
 Event-driven order processing platform using Kafka for asynchronous lifecycle execution.
 
-**Demonstrates:** Kafka producers and consumers, idempotency, retries, dead-letter topics, persisted domain events, Testcontainers and failure recovery.
+**Demonstrates:** Kafka producers and consumers, transactional outbox, idempotency, retries, dead-letter topics, Testcontainers and failure recovery.
+
+[![OrderFlow CI](https://github.com/itqaanconsulting/orderflow-events/actions/workflows/ci.yml/badge.svg)](https://github.com/itqaanconsulting/orderflow-events/actions/workflows/ci.yml)
 
 [![OrderFlow Events demo](https://raw.githubusercontent.com/itqaanconsulting/orderflow-events/main/docs/images/orderflow-demo.png)](https://github.com/itqaanconsulting/orderflow-events)
 
@@ -38,7 +43,9 @@ Event-driven order processing platform using Kafka for asynchronous lifecycle ex
 
 Integration hub that accepts REST, CSV and SFTP input, normalizes it to a canonical model and delivers it to an external HTTP API.
 
-**Demonstrates:** Apache Camel, enterprise integration patterns, content-based routing, data transformation, retry policies, dead-letter handling and WireMock integration tests.
+**Demonstrates:** Apache Camel, enterprise integration patterns, canonical data transformation, retry policies, persistent dead-letter handling, manual reprocessing and WireMock integration tests.
+
+[![Camel build](https://github.com/itqaanconsulting/camel-integration-hub/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/camel-integration-hub/actions/workflows/build.yml)
 
 [![Camel Integration Hub dashboard](https://raw.githubusercontent.com/itqaanconsulting/camel-integration-hub/main/docs/dashboard.png)](https://github.com/itqaanconsulting/camel-integration-hub)
 
@@ -48,11 +55,15 @@ Secured administration platform for customers, projects, time entries, approvals
 
 **Demonstrates:** REST API design, workflow-oriented domain modelling, Keycloak security, role-based authorization, audit logging, PDF generation, PostgreSQL and Flyway.
 
+[![FreelanceFlow CI](https://github.com/itqaanconsulting/freelanceflow-api/actions/workflows/ci.yml/badge.svg)](https://github.com/itqaanconsulting/freelanceflow-api/actions/workflows/ci.yml)
+
 ### [LogScope Desktop](https://github.com/itqaanconsulting/logscope-desktop)
 
 Local JavaFX application for searching, filtering and analysing application logs without uploading operational data.
 
 **Demonstrates:** JavaFX, asynchronous file processing, multiple log formats, stacktrace parsing, timelines, saved filters, CSV export and Windows packaging with `jpackage`.
+
+[![LogScope build](https://github.com/itqaanconsulting/logscope-desktop/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/logscope-desktop/actions/workflows/build.yml)
 
 [![LogScope log viewer](https://raw.githubusercontent.com/itqaanconsulting/logscope-desktop/main/docs/images/log-viewer.png)](https://github.com/itqaanconsulting/logscope-desktop)
 
@@ -73,3 +84,5 @@ Local JavaFX application for searching, filtering and analysing application logs
 ## Contact
 
 For freelance Java, backend or integration assignments, connect with me through my GitHub profile.
+
+For a guided overview, see the [portfolio presentation guide](PORTFOLIO-GUIDE.md).

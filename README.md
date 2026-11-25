@@ -1,17 +1,21 @@
 ![Hani El Amam - Senior Java Software Engineer](assets/hani-el-amam-banner.png)
 
-**Senior Java Software Engineer | Technical Consultant | Amsterdam**
+**Senior Java Integration Engineer | Apache Camel & Red Hat Fuse | Amsterdam**
 
-I am a software engineer and technical consultant with more than 11 years of experience building, integrating and improving software systems in complex enterprise environments.
+I am a freelance Java developer and technical consultant with more than 11 years of experience in complex enterprise environments. I specialise in **system integration with Apache Camel and Red Hat Fuse**, Spring Boot and Quarkus backends, and **migrating Fuse 7 integrations to Camel 4 on OpenShift**.
 
-My work sits at the intersection of business and technology. I translate requirements and process challenges into maintainable backend services, integration solutions and practical technical designs. I am available for freelance assignments involving Java development, system integration and backend modernization.
+Fuse 7 is out of support since June 2026. I help teams move their integrations to the Red Hat build of Apache Camel without changing behaviour: freeze what the integration does in automated scenarios first, then migrate, and prove the result passes the same scenarios.
+
+Available for freelance assignments in Java integration, Fuse-to-Camel migration and backend modernization.
 
 ## Expertise
 
 | Area | Technologies and skills |
 | --- | --- |
-| Backend development | Java 21, Spring Boot, REST APIs, microservices, JPA, Hibernate |
-| Integration | Apache Camel, Kafka, ActiveMQ Artemis, XML, JSON, SFTP |
+| Integration | Apache Camel 2/3/4, Red Hat Fuse 7, Camel Quarkus, enterprise integration patterns, Kafka, ActiveMQ Artemis / AMQ, JMS |
+| Migration | Fuse 7 (Karaf, Blueprint) to Camel 4 on Quarkus or Spring Boot, javax to jakarta, OpenShift |
+| Messages and contracts | SOAP / CXF, WSDL, XSD, XSLT (Saxon), XML, JSON, SFTP |
+| Backend development | Java 21, Spring Boot, Quarkus, REST APIs, microservices, JPA, Hibernate |
 | Security | OAuth2, OpenID Connect, JWT, Keycloak |
 | Data | PostgreSQL, Microsoft SQL Server, MongoDB, Flyway |
 | Cloud and delivery | Docker, Kubernetes, OpenShift, Terraform, Azure, CI/CD |
@@ -20,52 +24,54 @@ My work sits at the intersection of business and technology. I translate require
 
 ## Portfolio
 
-### [ServiceDesk Cloud Platform](https://github.com/itqaanconsulting/servicedesk-cloud-platform)
+### [Fuse 7 to Camel 4 Migration](https://github.com/itqaanconsulting/fuse7-to-camel4-migration)
 
-Cloud-native service desk implemented as three independently deployable Spring Boot microservices.
+A logistics integration as it runs on Red Hat Fuse 7 (Camel 2.23, Blueprint, Karaf), migrated to Camel 4 on Quarkus for OpenShift. Both versions run the same golden-file scenarios; the build fails if they differ.
 
-**Demonstrates:** microservice boundaries, resilient service communication, assignment notifications, PostgreSQL, distributed tracing, Prometheus, Grafana, Docker, Kubernetes, Terraform and Azure Container Apps.
+**Demonstrates:** Fuse 7 to Camel 4 migration, Blueprint to XML IO DSL and CDI, Config Admin to MicroProfile Config, AMQ/JMS, SOAP via CXF, XSD validation, XSLT 3 mapping, idempotent consumer, retries and dead letter queues, health probes, Prometheus metrics, Kustomize manifests and a written [migration guide](https://github.com/itqaanconsulting/fuse7-to-camel4-migration/blob/main/docs/MIGRATION.md). The equivalence scenarios caught a real regression: HttpClient 5 retrying on its own and doubling the calls to a failing downstream system.
 
-[![ServiceDesk build](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/build.yml)
-[![Terraform](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/terraform.yml/badge.svg)](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/terraform.yml)
-
-### [OrderFlow Events](https://github.com/itqaanconsulting/orderflow-events)
-
-Event-driven order processing platform using Kafka for asynchronous lifecycle execution.
-
-**Demonstrates:** Kafka producers and consumers, transactional outbox, idempotency, retries, dead-letter topics, Testcontainers and failure recovery.
-
-[![OrderFlow CI](https://github.com/itqaanconsulting/orderflow-events/actions/workflows/ci.yml/badge.svg)](https://github.com/itqaanconsulting/orderflow-events/actions/workflows/ci.yml)
-
-[![OrderFlow Events demo](https://raw.githubusercontent.com/itqaanconsulting/orderflow-events/main/docs/images/orderflow-demo.png)](https://github.com/itqaanconsulting/orderflow-events)
+[![Migration build](https://github.com/itqaanconsulting/fuse7-to-camel4-migration/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/fuse7-to-camel4-migration/actions/workflows/build.yml)
 
 ### [Camel Integration Hub](https://github.com/itqaanconsulting/camel-integration-hub)
 
 Integration hub that accepts REST, CSV and SFTP input, normalizes it to a canonical model and delivers it to an external HTTP API.
 
-**Demonstrates:** Apache Camel, enterprise integration patterns, canonical data transformation, retry policies, persistent dead-letter handling, manual reprocessing and WireMock integration tests.
+**Demonstrates:** Apache Camel, enterprise integration patterns, canonical data transformation, idempotent receiver, retries for HTTP and transport failures, persistent dead-letter handling, manual reprocessing and WireMock integration tests.
 
 [![Camel build](https://github.com/itqaanconsulting/camel-integration-hub/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/camel-integration-hub/actions/workflows/build.yml)
 
 [![Camel Integration Hub dashboard](https://raw.githubusercontent.com/itqaanconsulting/camel-integration-hub/main/docs/dashboard.png)](https://github.com/itqaanconsulting/camel-integration-hub)
 
+### [OrderFlow Events](https://github.com/itqaanconsulting/orderflow-events)
+
+Event-driven order processing platform using Kafka for asynchronous lifecycle execution.
+
+**Demonstrates:** Kafka producers and consumers, transactional outbox with `SKIP LOCKED` for multiple instances, idempotency, retries, dead-letter topics, Testcontainers and failure recovery.
+
+[![OrderFlow CI](https://github.com/itqaanconsulting/orderflow-events/actions/workflows/ci.yml/badge.svg)](https://github.com/itqaanconsulting/orderflow-events/actions/workflows/ci.yml)
+
+[![OrderFlow Events demo](https://raw.githubusercontent.com/itqaanconsulting/orderflow-events/main/docs/images/orderflow-demo.png)](https://github.com/itqaanconsulting/orderflow-events)
+
+### [ServiceDesk Cloud Platform](https://github.com/itqaanconsulting/servicedesk-cloud-platform)
+
+Cloud-native service desk implemented as three independently deployable Spring Boot microservices.
+
+**Demonstrates:** microservice boundaries, resilient service communication with idempotency keys for safe retries, assignment notifications, PostgreSQL, distributed tracing, Prometheus, Grafana, Docker, Kubernetes, Terraform and Azure Container Apps.
+
+[![ServiceDesk build](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/build.yml)
+[![Terraform](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/terraform.yml/badge.svg)](https://github.com/itqaanconsulting/servicedesk-cloud-platform/actions/workflows/terraform.yml)
+
 ### [FreelanceFlow API](https://github.com/itqaanconsulting/freelanceflow-api)
 
 Secured administration platform for customers, projects, time entries, approvals and invoice generation.
 
-**Demonstrates:** REST API design, workflow-oriented domain modelling, Keycloak security, role-based authorization, audit logging, PDF generation, PostgreSQL and Flyway.
+**Demonstrates:** REST API design, workflow-oriented domain modelling, Keycloak security, role-based authorization with segregation of duties, audit logging with the acting user, concurrency-safe invoice numbering, PDF generation, PostgreSQL and Flyway.
 
 [![FreelanceFlow CI](https://github.com/itqaanconsulting/freelanceflow-api/actions/workflows/ci.yml/badge.svg)](https://github.com/itqaanconsulting/freelanceflow-api/actions/workflows/ci.yml)
 
-### [LogScope Desktop](https://github.com/itqaanconsulting/logscope-desktop)
+### Other
 
-Local JavaFX application for searching, filtering and analysing application logs without uploading operational data.
-
-**Demonstrates:** JavaFX, asynchronous file processing, multiple log formats, stacktrace parsing, timelines, saved filters, CSV export and Windows packaging with `jpackage`.
-
-[![LogScope build](https://github.com/itqaanconsulting/logscope-desktop/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/logscope-desktop/actions/workflows/build.yml)
-
-[![LogScope log viewer](https://raw.githubusercontent.com/itqaanconsulting/logscope-desktop/main/docs/images/log-viewer.png)](https://github.com/itqaanconsulting/logscope-desktop)
+- [LogScope Desktop](https://github.com/itqaanconsulting/logscope-desktop): local JavaFX tool for searching and analysing application logs, packaged for Windows with `jpackage`.
 
 ## Professional Approach
 
@@ -73,6 +79,7 @@ Local JavaFX application for searching, filtering and analysing application logs
 - Treat validation, security, observability and failure handling as part of the design.
 - Communicate technical trade-offs clearly to developers and non-technical stakeholders.
 - Improve existing systems pragmatically instead of rewriting without a business reason.
+- Migrate with evidence: capture current behaviour in tests before changing the runtime.
 
 ## Background
 
@@ -83,6 +90,6 @@ Local JavaFX application for searching, filtering and analysing application logs
 
 ## Contact
 
-For freelance Java, backend or integration assignments, connect with me through my GitHub profile.
+For freelance Java integration, Camel or Fuse migration assignments, connect with me through my GitHub profile.
 
 For a guided overview, see the [portfolio presentation guide](PORTFOLIO-GUIDE.md).

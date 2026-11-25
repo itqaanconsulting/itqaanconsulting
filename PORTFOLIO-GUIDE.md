@@ -4,13 +4,22 @@ This guide provides a concise route through the portfolio for technical intervie
 
 ## Recommended Order
 
-1. **FreelanceFlow API** - secure business workflows and backend engineering
-2. **OrderFlow Events** - event-driven architecture and delivery guarantees
-3. **Camel Integration Hub** - system integration and operational recovery
+1. **Fuse 7 to Camel 4 Migration** - the migration approach and the evidence that behaviour did not change
+2. **Camel Integration Hub** - system integration and operational recovery
+3. **OrderFlow Events** - event-driven architecture and delivery guarantees
 4. **ServiceDesk Cloud Platform** - microservices, observability and cloud delivery
-5. **LogScope Desktop** - local Java desktop development and usability
+5. **FreelanceFlow API** - secure business workflows and backend engineering
+6. **LogScope Desktop** - local Java desktop development and usability
 
 ## Two-Minute Project Demos
+
+### Fuse 7 to Camel 4 Migration
+
+**Show:** the Blueprint route next to the Camel 4 XML route, one golden-file scenario, and the CI run where the legacy and the modern implementation pass the same eight scenarios.
+
+**Explain:** behaviour is frozen in scenarios before anything is migrated. The contracts and XSLT mappings move unchanged; only what Camel 3/4 and Quarkus force is changed, and each change is listed in the migration guide.
+
+**Technical choice:** the equivalence scenarios are the point. They caught a regression a code review would miss: Apache HttpClient 5 retries `503` by itself, doubling the calls to a failing downstream system on top of Camel's redelivery policy.
 
 ### FreelanceFlow API
 
@@ -65,11 +74,11 @@ Avoid listing frameworks without context. Connect each technology to a requireme
 
 ## LinkedIn Project Summary
 
-> Built a five-project Java portfolio focused on realistic business and operational problems: secured workflow APIs, Kafka-based event processing with a transactional outbox, Apache Camel integrations with persistent recovery, observable cloud-native microservices, and a packaged JavaFX log-analysis desktop application. Each repository includes automated tests, CI and documented architecture and demo scenarios.
+> Built a Java integration portfolio around realistic operational problems, led by a Red Hat Fuse 7 to Camel 4 on Quarkus migration in which the old and the new implementation pass the same golden-file scenarios. Further projects cover Apache Camel integrations with persistent recovery, Kafka event processing with a transactional outbox, resilient cloud-native microservices and secured workflow APIs. Each repository includes automated tests, CI and documented architecture.
 
 ## CV Summary
 
-**Selected engineering portfolio:** designed and implemented Java 21 and Spring Boot solutions covering OAuth2 security, workflow modelling, Kafka event processing, transactional outbox and idempotency, Apache Camel integration patterns, microservices, observability, Docker, Kubernetes, Terraform, Azure and JavaFX desktop packaging.
+**Selected engineering portfolio:** migrated a Fuse 7 (Camel 2, Blueprint, Karaf) integration to Camel 4 on Quarkus and OpenShift with equivalence tests; designed and implemented Java 21 and Spring Boot solutions covering OAuth2 security, workflow modelling, Kafka event processing, transactional outbox and idempotency, Apache Camel integration patterns, microservices, observability, Docker, Kubernetes, Terraform, Azure and JavaFX desktop packaging.
 
 ## Recording Checklist
 

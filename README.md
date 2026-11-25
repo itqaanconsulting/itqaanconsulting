@@ -90,6 +90,6 @@ Secured administration platform for customers, projects, time entries, approvals
 
 ## Contact
 
-For freelance Java integration, Camel or Fuse migration assignments, connect with me through my GitHub profile.
+For freelance Java integration, Camel or Fuse migration assignments: [itqaan.consulting.nl@gmail.com](mailto:itqaan.consulting.nl@gmail.com)
 
 For a guided overview, see the [portfolio presentation guide](PORTFOLIO-GUIDE.md).

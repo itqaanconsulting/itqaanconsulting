@@ -6,7 +6,9 @@ I am a freelance Java developer and technical consultant with more than 11 years
 
 Fuse 7 is out of support since June 2026. I help teams move their integrations to the Red Hat build of Apache Camel without changing behaviour: freeze what the integration does in automated scenarios first, then migrate, and prove the result passes the same scenarios.
 
-Available for freelance assignments in Java integration, Fuse-to-Camel migration and backend modernization.
+I also connect legacy systems to AI agents safely: an integration layer that exposes an existing SOAP system through MCP, with authorisation per agent, purpose binding, PII redaction and an audit trail enforced in the gateway rather than in the prompt.
+
+Available for freelance assignments in Java integration, Fuse-to-Camel migration, backend modernization and AI-agent integration.
 
 ## Expertise
 
@@ -16,7 +18,8 @@ Available for freelance assignments in Java integration, Fuse-to-Camel migration
 | Migration | Fuse 7 (Karaf, Blueprint) to Camel 4 on Quarkus or Spring Boot, javax to jakarta, OpenShift |
 | Messages and contracts | SOAP / CXF, WSDL, XSD, XSLT (Saxon), XML, JSON, SFTP |
 | Backend development | Java 21, Spring Boot, Quarkus, REST APIs, microservices, JPA, Hibernate |
-| Security | OAuth2, OpenID Connect, JWT, Keycloak |
+| AI integration | Model Context Protocol (MCP) servers with Spring AI, agent governance, data minimisation for LLMs |
+| Security and privacy | OAuth2, OpenID Connect, JWT, Keycloak, GDPR purpose binding, NIS2 / Cyberbeveiligingswet, SBOM and dependency scanning |
 | Data | PostgreSQL, Microsoft SQL Server, MongoDB, Flyway |
 | Cloud and delivery | Docker, Kubernetes, OpenShift, Terraform, Azure, CI/CD |
 | Engineering | Domain modelling, automated testing, observability, resilience |
@@ -31,6 +34,14 @@ A logistics integration as it runs on Red Hat Fuse 7 (Camel 2.23, Blueprint, Kar
 **Demonstrates:** Fuse 7 to Camel 4 migration, Blueprint to XML IO DSL and CDI, Config Admin to MicroProfile Config, AMQ/JMS, SOAP via CXF, XSD validation, XSLT 3 mapping, idempotent consumer, retries and dead letter queues, health probes, Prometheus metrics, Kustomize manifests and a written [migration guide](https://github.com/itqaanconsulting/fuse7-to-camel4-migration/blob/main/docs/MIGRATION.md). The equivalence scenarios caught a real regression: HttpClient 5 retrying on its own and doubling the calls to a failing downstream system.
 
 [![Migration build](https://github.com/itqaanconsulting/fuse7-to-camel4-migration/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/fuse7-to-camel4-migration/actions/workflows/build.yml)
+
+### [Agent-ready Legacy](https://github.com/itqaanconsulting/agent-ready-legacy)
+
+A Java gateway that lets AI agents use a legacy municipal case system (SOAP) safely, through MCP for agents and REST for internal applications. The rules are enforced in the gateway: an agent only gets the tools and purposes it is registered for, never sees personal data, is rate limited, and every call lands in an audit trail without case content.
+
+**Demonstrates:** Spring Boot 4 and the Spring AI MCP server, OAuth2 scopes per agent, deny-by-default agent registry, purpose binding, PII redaction, audit trail on PostgreSQL with Flyway, hardened SOAP client (timeouts, XXE-safe parsing), Bucket4j rate limiting, end-to-end tests with a real MCP client, a Python demo agent, Docker Compose, a [threat model](https://github.com/itqaanconsulting/agent-ready-legacy/blob/main/docs/threat-model.md) mapped to NIS2, and an SBOM scanned in CI.
+
+[![Agent-ready Legacy build](https://github.com/itqaanconsulting/agent-ready-legacy/actions/workflows/build.yml/badge.svg)](https://github.com/itqaanconsulting/agent-ready-legacy/actions/workflows/build.yml)
 
 ### [Camel Integration Hub](https://github.com/itqaanconsulting/camel-integration-hub)
 
@@ -68,10 +79,6 @@ Secured administration platform for customers, projects, time entries, approvals
 **Demonstrates:** REST API design, workflow-oriented domain modelling, Keycloak security, role-based authorization with segregation of duties, audit logging with the acting user, concurrency-safe invoice numbering, PDF generation, PostgreSQL and Flyway.
 
 [![FreelanceFlow CI](https://github.com/itqaanconsulting/freelanceflow-api/actions/workflows/ci.yml/badge.svg)](https://github.com/itqaanconsulting/freelanceflow-api/actions/workflows/ci.yml)
-
-### Other
-
-- [LogScope Desktop](https://github.com/itqaanconsulting/logscope-desktop): local JavaFX tool for searching and analysing application logs, packaged for Windows with `jpackage`.
 
 ## Professional Approach
 
